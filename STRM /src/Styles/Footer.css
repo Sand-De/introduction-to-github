@@ -1,0 +1,219 @@
+/* -- Style Global -- */
+:root {
+    --primary-color: #0A120C;
+    --primary-color-more-dark: #001e0e;
+    --primary-color-dark: #003C1C;
+    --primary-color-hightlight: #4DC344;
+    --primary-color-lightgreen: #CBFCD8;
+    --primary-color-medlight: #DDD9C7;
+    --primary-color-full-light: #EDEBE3;
+    --primary-color-yellow: #FFC300;
+    --primary-color-rgba: #003c1c40;
+    --bs-body-bg: #0A0A0A;
+    --bs-body-font-family: 'Roboto', sans-serif;
+    --bs-body-font-family: 'Muli', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(60deg, #0a120c, #101010, #000e07, #000503, #101010);
+    background-size: 1000% 1000%;
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover,
+a:visited,
+a:link {
+    text-decoration: none;
+}
+
+/* -- Animation Background -- */
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+
+
+/* -- Style Footer -- */
+.footer {
+    background-image: linear-gradient(to left bottom, #0f0f0f, #0d0d0d, #090a0b, #060808);
+    padding: 2rem 0;
+    line-height: 24px;
+}
+
+/* -- Titre -- */
+.footer .title__footer {
+    letter-spacing: 0.5px;
+    color: var(--primary-color-hightlight);
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+}
+
+/* -- Liens & Slogan -- */
+.footer .link__footer,
+.footer .slogan__strm {
+    font-family: 'Mulish', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+    letter-spacing: 0.5px;
+    color: var(--primary-color-full-light);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer .link__footer a {
+    color: var(--primary-color-full-light);
+}
+
+.footer .link__footer a:hover {
+    color: var(--primary-color-hightlight);
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.footer .bold {
+    font-weight: 700;
+}
+
+.footer .slogan__strm {
+    color: var(--primary-color-full-light);
+}
+
+.footer .bottom__footer .bold {
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    color: var(--primary-color-full-light)
+}
+
+.footer .bottom__footer a {
+    color: var(--primary-color-hightlight);
+    text-decoration: none;
+}
+
+.footer .bottom__footer a:hover {
+    opacity: 0.5;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* -- Footer Icons Médias Sociaux -- */
+ul.networks {
+    list-style: none;
+    display: inline;
+    margin-left: 0 !important;
+    padding: 0;
+}
+
+ul.networks li {
+    display: inline;
+    margin: 0 5px;
+}
+
+.networks a {
+    background-color: var(--primary-color-dark);
+}
+
+.networks a.icoFacebook:hover,
+.networks a.icoLinkedin:hover,
+.networks a.icoCourriel:hover {
+    background-color: var(--primary-color-hightlight);
+}
+
+.networks a.icoFacebook:hover i,
+.networks a.icoLinkedin:hover i,
+.networks a.icoCourriel:hover i {
+    color: var(--primary-color-dark);
+}
+
+.networks a.social i:hover,
+.socialHoverClass {
+    color: var(--primary-color-medlight);
+}
+
+.circle li a {
+    display: inline-block;
+    position: relative;
+    margin: 0 auto 0 auto;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+}
+
+.circle li i {
+    margin: 0;
+    line-height: 30px;
+    text-align: center;
+}
+
+.circle li a:hover i,
+.triggeredHover {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms--transform: rotate(360deg);
+    transform: rotate(360deg);
+    transition: all 0.2s;
+}
+
+.circle i {
+    color: var(--primary-color);
+    transition: all 0.8s;
+}
+

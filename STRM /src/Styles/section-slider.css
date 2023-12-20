@@ -1,0 +1,197 @@
+/* -- Style Global -- */
+:root {
+    --primary-color: #0A120C;
+    --primary-color-more-dark: #001e0e;
+    --primary-color-dark: #003C1C;
+    --primary-color-hightlight: #4DC344;
+    --primary-color-lightgreen: #CBFCD8;
+    --primary-color-medlight: #DDD9C7;
+    --primary-color-full-light: #EDEBE3;
+    --primary-color-yellow: #FFC300;
+    --primary-color-rgba: #003c1c40;
+    --bs-body-bg: #0A0A0A;
+    --bs-body-font-family: 'Roboto', sans-serif;
+    --bs-body-font-family: 'Muli', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(60deg, #0a120c, #101010, #000e07, #000503, #101010);
+    background-size: 1000% 1000%;
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+}
+
+/* -- Animation Background -- */
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+
+
+/* -- Style Section Slider [Catégories] -- */
+#section {
+    max-height: 50vh;
+    margin: 0;
+    padding: 1rem 0;
+}
+
+#section .container__movies,
+#section .container__movies {
+    padding: 80px;
+}
+
+#section .title__categories {
+    position: absolute;
+    font-size: 26px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5px;
+    color: var(--primary-color-hightlight);
+    /*transform: rotate(-90deg);*/
+}
+
+#section .wrapper {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+#section .wrapper i.skip {
+    position: absolute;
+    bottom: 0;
+    left: 50;
+    font-size: 22px;
+    opacity: 0.7;
+    color: var(--primary-color-hightlight);
+    cursor: pointer;
+    transition: 1s all ease-in-out;
+}
+
+#section .wrapper i.skip:hover {
+    opacity: 1;
+    transition: 1s all ease-in-out;
+}
+
+#section .list__movies {
+    display: flex;
+    align-items: center;
+    height: 300px;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+}
+
+#section .item__movie {
+    position: relative;
+    margin-right: 30px;
+}
+
+#section .item__movie:hover .img__movie {
+    transform: scale(1.2);
+    margin: 0 30px;
+    opacity: 0.5;
+}
+#section .item__movie:hover .title__movie,
+#section .item__movie:hover .descript__movie,
+#section .item__movie:hover .watch__btn {
+    opacity: 1;
+}
+
+#section .item__movie .img__movie {
+    width: 270px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: all 1s ease-in-out;
+}
+
+#section .item__movie .title__movie {
+    position: absolute;
+    font-size: 32px;
+    top: 10%;
+    left: 50px;
+    font-weight: bold;
+    padding: 10px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+    color: var(--primary-color-hightlight);
+}
+
+#section .item__movie .descript__movie {
+    position: absolute;
+    font-size: 14px;
+    top: 30%;
+    left: 50px;
+    padding: 10px;
+    width: 230px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+    color: var(--primary-color-medlight);
+}
+
+#section .item__movie .watch__btn {
+    position: absolute;
+    bottom: 20px;
+    left: 60px;
+    padding: 5px 15px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+    color: var(--primary-color-medlight);
+    border-color: var(--primary-color-hightlight) !important;
+    cursor: pointer;
+}
+
+#section .item__movie .watch__btn:hover {
+    background-color: var(--primary-color-dark);
+    transition: 0.5s all ease-in-out;
+    border-color: transparent !important;
+    transition: 1s all ease-in-out;
+}

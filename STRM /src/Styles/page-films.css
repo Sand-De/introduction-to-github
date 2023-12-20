@@ -1,0 +1,254 @@
+/* -- Style Global -- */
+:root {
+    --primary-color: #0A120C;
+    --primary-color-more-dark: #001e0e;
+    --primary-color-dark: #003C1C;
+    --primary-color-hightlight: #4DC344;
+    --primary-color-lightgreen: #CBFCD8;
+    --primary-color-medlight: #DDD9C7;
+    --primary-color-full-light: #EDEBE3;
+    --primary-color-yellow: #FFC300;
+    --primary-color-rgba: #003c1c40;
+    --bs-body-bg: #0A0A0A;
+    --bs-body-font-family: 'Roboto', sans-serif;
+    --bs-body-font-family: 'Muli', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(60deg, #0a120c, #101010, #000e07, #000503, #101010);
+    background-size: 1000% 1000%;
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+}
+
+/* -- Animation Background -- */
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+
+
+/* Section Fiche Film */
+#movie__sheet {
+    min-width: 50vh;
+    padding: 5rem 0;
+    background-image:
+        linear-gradient(to bottom, rgba(20, 20, 20, 0.85), rgba(11, 10, 10, 0.60))
+}
+
+#movie__sheet .img-thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    border: none !important;
+}
+
+#movie__sheet h2.title__custom,
+#movie__sheet .subtitle,
+#movie__sheet .descript__movie,
+#movie__sheet .btn__group {
+    text-align: right;
+    margin: 0;
+}
+
+#movie__sheet h2.title__custom {
+    font-size: 5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--primary-color-medlight);
+}
+
+#movie__sheet .subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--primary-color-hightlight);
+}
+
+#movie__sheet p.descript__movie {
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.8;
+    padding: 10px 0 10px 50px;
+    color: var(--primary-color-full-light);
+}
+
+#movie__sheet .specs__deux {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: var(--primary-color-medlight);
+}
+
+#movie__sheet .specs__deux i {
+    font-size: 16px;
+    padding: 0 10px 0 0;
+    color: var(--primary-color-yellow)
+}
+
+#movie__sheet .specs__deux .movie__exit {
+    padding: 0 0 0 10px;
+}
+
+#movie__sheet .start__rating {
+    margin-left: 15px;
+}
+
+#movie_sheet .group__actors {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 0 0 3rem;
+}
+
+#movie__sheet .group__actors.bloc {
+    width: 100px;
+    height: auto;
+    border-radius: 20px;
+}
+
+#movie__sheet img.actor {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+#movie__sheet .bloc a {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+#movie__sheet .bloc a:hover {
+    transform: scale(1.1) !important;
+    transition: all 0.5s ease-in-out !important;
+}
+
+
+
+#movie__sheet .btn__group {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0 0 0;
+}
+
+#movie__sheet .color__btn {
+    border-color: var(--primary-color-hightlight);
+    color: var(--primary-color-full-light)
+}
+
+#movie__sheet .color__btn:hover {
+    background-color: var(--primary-color-hightlight);
+    color: var(--primary-color-full-light);
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* -- Style Étoiles -- */
+/* Enlève les puces des inputs [liste] */
+.start__rating>input {
+    display: none;
+}
+
+.start__rating>label:before {
+    content: "\f005";
+    /* Star */
+    font-size: 1em;
+    font-family: FontAwesome;
+    display: inline-block;
+    padding: 0 2px;
+}
+
+/* Style des étoiles quand elles ne sont pas cliquées */
+.start__rating>label {
+    color: #2D2D2D;
+}
+
+/* Style des étoiles quand elles sont cliquées */
+.start__rating>input:checked~label {
+    color: #FFC300;
+}
+
+.start__rating>input:hover~label {
+    color: #FFC300;
+    ;
+}
+
+
+/* -- Media Query -- */
+@media screen and (max-width: 677px) {
+    #movie__sheet {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #movie__sheet h2.title__custom,
+    #movie__sheet .subtitle {
+        text-align: center;
+        margin: 20px auto;
+    }
+
+    #movie__sheet p.descript__movie {
+        text-align: left;
+        padding: 15px 5px;
+    }
+
+    #movie__sheet .specs__deux,
+    #movie__sheet .btn__group {
+        justify-content: center;
+        text-align: center;
+    }
+
+}
